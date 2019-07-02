@@ -76,7 +76,7 @@ ol {
     background: pink;
 }
 
-.zoey-timeline ol li div {
+.zoey-timeline ol li > div {
     position: absolute;
     left: calc(100% + 5px);
     width: 300px;
@@ -87,7 +87,7 @@ ol {
     white-space: normal;
 }
 
-.zoey-timeline ol li div::before {
+.zoey-timeline ol li > div::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -99,23 +99,23 @@ ol {
 }
 
 /* top timeline spacing from line */
-.zoey-timeline ol li:nth-child(odd) div {
+.zoey-timeline ol li:nth-child(odd) > div {
     top: -25px;
     transform: translateY(-100%);
 }
 
-.zoey-timeline ol li:nth-child(odd) div::before {
+.zoey-timeline ol li:nth-child(odd) > div::before {
     top: 100%;
     border-width: 10px 10px 0 0;
     border-color: white transparent transparent transparent;
 }
 
 /* bottom timeline spacing from line */
-.zoey-timeline ol li:nth-child(even) div {
+.zoey-timeline ol li:nth-child(even) > div {
     top: calc(100% + 25px);
 }
 
-.zoey-timeline ol li:nth-child(even) div::before {
+.zoey-timeline ol li:nth-child(even) > div::before {
     top: -10px;
     border-width: 10px 0 0 10px;
     border-color: transparent transparent transparent white;
@@ -132,9 +132,19 @@ ol {
 /* Timeline Images/Videos */
 
 .timeline-img {
-    position: absolute;
-    width: 15px;
-    height: 15px;
+    display: block;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.timeline-img-container {
+    margin-top: 10px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Timeline Buttons */
