@@ -10,7 +10,7 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: rgb(190, 86, 94);
+    background: rgb(59, 59, 146);
 }
 
 ol {
@@ -23,13 +23,13 @@ ol {
 }
 
 .heading {
-    background: lightblue;
+    /* background: rgb(129, 142, 255); */
     padding: 25px 0;
 }
 
 .heading,
 .container {
-    max-width: 1300px;
+    max-width: 1350px;
     text-align: center;    
 }
 
@@ -63,6 +63,7 @@ ol {
     margin-left: 18px;
 }
 
+/* Timeline dots */
 .zoey-timeline ol li:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -76,18 +77,18 @@ ol {
     background: pink;
 }
 
-.zoey-timeline ol li div {
+.zoey-timeline ol li > div {
     position: absolute;
     left: calc(100% + 5px);
     width: 300px;
     padding: 30px;
     font-size: 1rem;
-    color: rgb(5, 0, 1);
-    background: firebrick;
+    color: black;
+    background: rgb(190, 86, 94);
     white-space: normal;
 }
 
-.zoey-timeline ol li div::before {
+.zoey-timeline ol li > div::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -95,27 +96,27 @@ ol {
     width: 0;
     height: 20px;
     border-style: solid;
-    border-color: firebrick;
+    border-color: rgb(51, 45, 45);
 }
 
 /* top timeline spacing from line */
-.zoey-timeline ol li:nth-child(odd) div {
+.zoey-timeline ol li:nth-child(odd) > div {
     top: -25px;
     transform: translateY(-100%);
 }
 
-.zoey-timeline ol li:nth-child(odd) div::before {
+.zoey-timeline ol li:nth-child(odd) > div::before {
     top: 100%;
     border-width: 10px 10px 0 0;
     border-color: white transparent transparent transparent;
 }
 
 /* bottom timeline spacing from line */
-.zoey-timeline ol li:nth-child(even) div {
+.zoey-timeline ol li:nth-child(even) > div {
     top: calc(100% + 25px);
 }
 
-.zoey-timeline ol li:nth-child(even) div::before {
+.zoey-timeline ol li:nth-child(even) > div::before {
     top: -10px;
     border-width: 10px 0 0 10px;
     border-color: transparent transparent transparent white;
@@ -131,10 +132,28 @@ ol {
 
 /* Timeline Images/Videos */
 
-.timeline-img {
-    position: absolute;
-    width: 15px;
-    height: 15px;
+.timeline-img-container {
+    margin-top: 10px;
+    height: 250px;
+    /* overflow: hidden; */
+    position: relative;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Fix orientation of 2 photos */
+.rotate-img {
+    -webkit-transform:rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+}
+
+.zoey-timeline ol li:nth-child(11n) {
+    image-orientation: 90deg flip;
 }
 
 /* Timeline Buttons */
