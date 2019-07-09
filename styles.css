@@ -25,13 +25,15 @@ ol {
 .heading {
     /* background: rgb(129, 142, 255); */
     padding: 25px 0;
+    position: fixed;
+    width: 100%;
 }
 
 .heading,
 .container {
-    max-width: 1350px;
     text-align: center;    
 }
+
 
 /* Timeline Styling */
 .zoey-timeline {
@@ -45,7 +47,7 @@ ol {
 .zoey-timeline ol {
     font-size: 0;
     width: 100vw;
-    padding: 250px 0;
+    padding: 50% 0;
     transition: all 1s;
 }
 
@@ -67,7 +69,7 @@ ol {
 }
 
 /* Timeline dots & line */
-.zoey-timeline ol li:not(:last-child)::after {
+.zoey-timeline ol li::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -106,6 +108,11 @@ ol {
 .zoey-timeline ol li:nth-child(odd) > div {
     top: -25px;
     transform: translateY(-100%);
+    transition: ease-in-out .75s;
+}
+
+.zoey-timeline ol li:nth-child(odd) > div:hover {
+    transform: scale(1.25) translateY(-85%);
 }
 
 .zoey-timeline ol li:nth-child(odd) > div::before {
@@ -145,6 +152,15 @@ ol {
     background-repeat: no-repeat;
 }
 
+.timeline-card {
+    transition: ease-in-out .75s;
+    z-index: 2000;
+}
+
+.timeline-card:hover {
+    transform: scale(1.25);
+}
+
 /* Fix orientation of 2 photos */
 .rotate-img {
     -webkit-transform:rotate(90deg);
@@ -153,31 +169,11 @@ ol {
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-}
 
 .zoey-timeline ol li:nth-child(11n) {
     image-orientation: 90deg flip;
 }
 
-/* Timeline Buttons */
-/* 
-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-.arrow {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-right: 20px;
-  }
-
-.arrow img {
-    width: 50px;
-    height: 50px;
-} */
 
 
 /* Media Queries */
