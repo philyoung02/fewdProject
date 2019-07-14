@@ -10,7 +10,9 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* background: rgb(59, 59, 146); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 1500px 1000px;
 }
 
 ol {
@@ -22,8 +24,18 @@ ol {
     font-size: 50px;
 }
 
+p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main-header,
+p {
+    color: rgb(190, 86, 94);
+    text-shadow: 3px 3px 3px black;
+}
+
 .heading {
-    /* background: rgb(129, 142, 255); */
     padding: 25px 0;
     position: fixed;
     width: 100%;
@@ -145,7 +157,6 @@ ol {
 .timeline-img-container {
     margin-top: 10px;
     height: 250px;
-    /* overflow: hidden; */
     position: relative;
     background-position: top center;
     background-size: cover;
