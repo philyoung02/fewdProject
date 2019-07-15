@@ -46,6 +46,9 @@ p {
     text-align: center;    
 }
 
+/* Media Queries */
+
+@media (min-width: 769px) {
 
 /* Timeline Styling */
 .zoey-timeline {
@@ -54,13 +57,6 @@ p {
 
 .hidden > div {
     display: none;
-}
-
-.zoey-timeline ol {
-    font-size: 0;
-    width: 100vw;
-    padding: 50% 0;
-    transition: all 1s;
 }
 
 .zoey-timeline ol li {
@@ -81,6 +77,14 @@ p {
 }
 
 /* Timeline dots & line */
+
+.zoey-timeline ol {
+    font-size: 0;
+    width: 100vw;
+    padding: 50% 0;
+    transition: all 1s;
+}
+
 .zoey-timeline ol li::after {
     content: "";
     position: absolute;
@@ -181,13 +185,7 @@ p {
     transform: rotate(90deg);
 }
 
-.zoey-timeline ol li:nth-child(11n) {
-    image-orientation: 90deg flip;
 }
-
-
-
-/* Media Queries */
 
 @media (max-width: 769px){
 
@@ -207,6 +205,10 @@ p {
         content: "Scroll down to see more about me!";
     }
 
+    .heading {
+        position: relative;
+    }
+
     .zoey-timeline ol li:nth-child(odd) > div,
     .zoey-timeline ol li:nth-child(even) > div {
         display: inline-block;
@@ -217,4 +219,12 @@ p {
     .zoey-timeline ol li:nth-child(odd) > div:hover {
         transform: translateY(0);
     }
+
+    .zoey-timeline ol li::after {
+        bottom: 0;
+        width: 0;
+        height: 0;
+        transform: translateY(0);
+    }
+    
 };
