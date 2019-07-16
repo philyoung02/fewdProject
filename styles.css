@@ -50,144 +50,144 @@ p {
 
 @media (min-width: 769px) {
 
-/* Timeline Styling */
-.zoey-timeline {
-    white-space: nowrap;
+    /* Timeline Styling */
+    .zoey-timeline {
+        white-space: nowrap;
+    }
+
+    .hidden > div {
+        display: none;
+    }
+
+    .zoey-timeline ol li {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+        width: 250px;
+        height: 5px;
+        background: grey;
+    }
+
+    .zoey-timeline ol li:last-child {
+        width: 300px;
+    }
+
+    .zoey-timeline ol li:not(:first-child) {
+        margin-left: 18px;
+    }
+
+    /* Timeline dots & line */
+
+    .zoey-timeline ol {
+        font-size: 0;
+        width: 100vw;
+        padding: 50% 0;
+        transition: all 1s;
+    }
+
+    .zoey-timeline ol li::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: calc(100%);
+        bottom: 0;
+        width: 18px;
+        height: 18px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: pink;
+    }
+
+    .zoey-timeline ol li > div {
+        position: absolute;
+        left: calc(100% + 5px);
+        width: 300px;
+        padding: 30px;
+        font-size: 1rem;
+        color: black;
+        background: rgb(190, 86, 94);
+        white-space: normal;
+    }
+
+    .zoey-timeline ol li > div::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 20px;
+        border-style: solid;
+        border-color: rgb(51, 45, 45);
+    }
+
+    /* top timeline spacing from line */
+    .zoey-timeline ol li:nth-child(odd) > div {
+        top: -25px;
+        transform: translateY(-100%);
+        transition: ease-in-out .75s;
+    }
+
+    .zoey-timeline ol li:nth-child(odd) > div:hover {
+        transform: scale(1.25) translateY(-85%);
+    }
+
+    .zoey-timeline ol li:nth-child(odd) > div::before {
+        top: 100%;
+        border-width: 10px 10px 0 0;
+        border-color: white transparent transparent transparent;
+    }
+
+    /* bottom timeline spacing from line */
+    .zoey-timeline ol li:nth-child(even) > div {
+        top: calc(100% + 25px);
+    }
+
+    .zoey-timeline ol li:nth-child(even) > div::before {
+        top: -10px;
+        border-width: 10px 0 0 10px;
+        border-color: transparent transparent transparent white;
+    }
+
+    /* Date styling */
+    .zoey-timeline time {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Timeline Images/Videos */
+
+    .timeline-img-container {
+        margin-top: 10px;
+        height: 250px;
+        position: relative;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .timeline-card {
+        transition: ease-in-out .75s;
+        z-index: 2000;
+    }
+
+    .timeline-card:hover {
+        transform: scale(1.25);
+    }
+
+    /* Fix orientation of 2 photos */
+    .rotate-img {
+        -webkit-transform:rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
 }
 
-.hidden > div {
-    display: none;
-}
-
-.zoey-timeline ol li {
-    position: relative;
-    display: inline-block;
-    list-style-type: none;
-    width: 250px;
-    height: 5px;
-    background: grey;
-}
-
-.zoey-timeline ol li:last-child {
-    width: 300px;
-}
-
-.zoey-timeline ol li:not(:first-child) {
-    margin-left: 18px;
-}
-
-/* Timeline dots & line */
-
-.zoey-timeline ol {
-    font-size: 0;
-    width: 100vw;
-    padding: 50% 0;
-    transition: all 1s;
-}
-
-.zoey-timeline ol li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: calc(100%);
-    bottom: 0;
-    width: 18px;
-    height: 18px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: pink;
-}
-
-.zoey-timeline ol li > div {
-    position: absolute;
-    left: calc(100% + 5px);
-    width: 300px;
-    padding: 30px;
-    font-size: 1rem;
-    color: black;
-    background: rgb(190, 86, 94);
-    white-space: normal;
-}
-
-.zoey-timeline ol li > div::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 20px;
-    border-style: solid;
-    border-color: rgb(51, 45, 45);
-}
-
-/* top timeline spacing from line */
-.zoey-timeline ol li:nth-child(odd) > div {
-    top: -25px;
-    transform: translateY(-100%);
-    transition: ease-in-out .75s;
-}
-
-.zoey-timeline ol li:nth-child(odd) > div:hover {
-    transform: scale(1.25) translateY(-85%);
-}
-
-.zoey-timeline ol li:nth-child(odd) > div::before {
-    top: 100%;
-    border-width: 10px 10px 0 0;
-    border-color: white transparent transparent transparent;
-}
-
-/* bottom timeline spacing from line */
-.zoey-timeline ol li:nth-child(even) > div {
-    top: calc(100% + 25px);
-}
-
-.zoey-timeline ol li:nth-child(even) > div::before {
-    top: -10px;
-    border-width: 10px 0 0 10px;
-    border-color: transparent transparent transparent white;
-}
-
-/* Date styling */
-.zoey-timeline time {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Timeline Images/Videos */
-
-.timeline-img-container {
-    margin-top: 10px;
-    height: 250px;
-    position: relative;
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.timeline-card {
-    transition: ease-in-out .75s;
-    z-index: 2000;
-}
-
-.timeline-card:hover {
-    transform: scale(1.25);
-}
-
-/* Fix orientation of 2 photos */
-.rotate-img {
-    -webkit-transform:rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-}
-
-@media (max-width: 769px){
+@media (max-width: 700px){
 
    body {
        background: none;
@@ -209,21 +209,47 @@ p {
         position: relative;
     }
 
+    .zoey-timeline ol li {
+        margin-top: 30px;
+        text-align: center;
+    }
+
     .zoey-timeline ol li:nth-child(odd) > div,
     .zoey-timeline ol li:nth-child(even) > div {
         display: inline-block;
         transform: translateY(0);
         transition: 0s;
-    }
-    
-    .zoey-timeline ol li:nth-child(odd) > div:hover {
-        transform: translateY(0);
+        background-color: rgb(190, 86, 94);
     }
 
-    .zoey-timeline ol li::after {
-        bottom: 0;
-        width: 0;
-        height: 0;
+    .timeline-img-container {
+        margin-top: 10px;
+        height: 650px;
+        position: relative;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+      /* Fix orientation of 2 photos */
+      .rotate-img {
+        -webkit-transform:rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+       /* Date styling */
+       .zoey-timeline time {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    
+    .zoey-timeline ol li:nth-child(odd) > div:hover {
         transform: translateY(0);
     }
     
