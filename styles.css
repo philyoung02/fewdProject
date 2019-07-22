@@ -10,9 +10,10 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(images/zoey1.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 1500px 1000px;
+    background-size: cover;
 }
 
 ol {
@@ -187,11 +188,12 @@ p {
 
 }
 
-@media (max-width: 700px){
+@media (max-width: 768px) {
 
    body {
        background: none;
-       background-color: lightblue; 
+       background-color:  rgb(190, 86, 94);
+       background-size: 768px; 
     }
 
     p {
@@ -203,14 +205,18 @@ p {
         display: block;
         position: relative;
         content: "Scroll down to see more about me!";
+        font-size: 20px;
     }
 
     .heading {
         position: relative;
+        background-color: lightblue;
+        font-size: 5px;
+        padding: 0;
     }
 
     .zoey-timeline ol li {
-        margin-top: 30px;
+        margin-top: 20px;
         text-align: center;
     }
 
@@ -225,10 +231,16 @@ p {
     .timeline-img-container {
         margin-top: 10px;
         height: 650px;
+        width: 100%;
         position: relative;
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    .timeline-card {
+        padding: 5px;
+        border-bottom: solid black 3px;
     }
 
       /* Fix orientation of 2 photos */
@@ -243,7 +255,6 @@ p {
        /* Date styling */
        .zoey-timeline time {
         display: block;
-        font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 10px;
     }
@@ -254,3 +265,4 @@ p {
     }
     
 };
+
