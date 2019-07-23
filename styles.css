@@ -97,7 +97,9 @@ p {
         transform: translateY(-50%);
         border-radius: 50%;
         background: pink;
+        cursor: pointer;
     }
+
 
     .zoey-timeline ol li > div {
         position: absolute;
@@ -177,15 +179,6 @@ p {
         transform: scale(1.25);
     }
 
-    /* Fix orientation of 2 photos */
-    .rotate-img {
-        -webkit-transform:rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-
 }
 
 @media (max-width: 768px) {
@@ -205,14 +198,12 @@ p {
         display: block;
         position: relative;
         content: "Scroll down to see more about me!";
-        font-size: 20px;
     }
 
     .heading {
         position: relative;
         background-color: lightblue;
-        font-size: 5px;
-        padding: 0;
+        padding: 15px;
     }
 
     .zoey-timeline ol li {
@@ -231,25 +222,11 @@ p {
     .timeline-img-container {
         margin-top: 10px;
         height: 650px;
-        width: 100%;
+        max-width: 100%;
         position: relative;
         background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
-    }
-
-    .timeline-card {
-        padding: 5px;
-        border-bottom: solid black 3px;
-    }
-
-      /* Fix orientation of 2 photos */
-      .rotate-img {
-        -webkit-transform:rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
     }
 
        /* Date styling */
