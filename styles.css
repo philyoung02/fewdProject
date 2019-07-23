@@ -231,7 +231,7 @@ p {
     .timeline-img-container {
         margin-top: 10px;
         height: 650px;
-        width: 100%;
+        max-width: 100%;
         position: relative;
         background-position: top center;
         background-size: cover;
